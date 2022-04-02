@@ -6,9 +6,10 @@ const Header = () => {
         <div>
             <h1>Welcome to React router</h1>
             <nav>
-                <CustomLink to="/" >Home</CustomLink>
-                <CustomLink to="/friends">Friends</CustomLink>
-                <CustomLink to="/about">About</CustomLink>
+                <Link to="/" >Home</Link>
+                <Link to="/friends">Friends</Link>
+                <Link to="/about">About</Link>
+                <Link to="/posts">Posts</Link>
             </nav>
         </div>
     );

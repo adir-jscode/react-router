@@ -7,6 +7,8 @@ import About from './Components/About/About';
 import NotFound from './Components/NotFound/NotFound';
 import Header from './Components/Header/Header';
 import FriendDetails from './Components/FriendDetails/FriendDetails';
+import Posts from './Components/Posts/Posts';
+import PostDetail from './Components/PostDetail/PostDetail';
 
 function App() {
   return (
@@ -15,8 +17,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>} ></Route>
         <Route path="/friends" element={<Friends></Friends>}></Route>
-        <Route path="/friend/:friendId" element={<FriendDetails/>}></Route>
+        <Route path="/friend/:friendId" element={<FriendDetails />}></Route>
         <Route path="/about" element={<About></About>}></Route>
+        {/* nested Route */}
+        <Route path="/posts" element={<Posts />}>
+          <Route path=":postId" element={<PostDetail></PostDetail>}></Route>
+        </Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
